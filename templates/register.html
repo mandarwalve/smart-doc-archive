@@ -1,0 +1,31 @@
+<script>
+  function togglePassword() {
+    const password = document.getElementById("password");
+
+    if (password.type === "password") {
+      password.type = "text";
+    } else {
+      password.type = "password";
+    }
+  }
+</script>
+
+<body>
+  <form method="POST" action="/register">
+    <input type="text" name="username" placeholder="Username" required />
+
+    <input type="email" name="email" placeholder="Email" required />
+    <div class="password-box">
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter password"
+        required
+      />
+
+      <button type="button" onclick="togglePassword()">👁️</button>
+    </div>
+    <button type="submit">Register</button>
+  </form>
+</body>
